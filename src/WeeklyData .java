@@ -2,8 +2,10 @@
  * The WeeklyData class stores and analyzes a week’s worth of numeric data.
  * This could represent steps taken, hours of sleep, money spent, screen time,
  * or any other measurable daily value.
+ * 
  * It will store the number of minutes read each day for a week (7 days)
  * and provide methods to calculate total, average, maximum, and minimum values.
+ * USER: People who read and want to track their reading habits.
  */
 public class WeeklyData {
 
@@ -13,10 +15,10 @@ public class WeeklyData {
     // TODO: Declare a private array to store the week’s data
     //       Choose an appropriate type (double[] or int[])
     //       Create other instance variables as necessary
-        private int[] data;
-        private int days;
-        private int minutesPerDay;
-        private int totalMinutes;
+        private double[] data;
+        private double days;
+        private double minutesPerDay;
+        private double totalMinutes;
     
 
 
@@ -35,9 +37,9 @@ public class WeeklyData {
         // TODO: Copy each value from input into the internal data array
         // NOTE: Do NOT do this.data = input; (that would create aliasing)
 
-        this.data = new int[input.length];
+        this.data = new double[input.length];
         for (int i = 0; i < input.length; i++) {
-            this.data[i] = (int) input[i];
+            this.data[i] = input[i];
         }
 
     }
@@ -106,7 +108,7 @@ public class WeeklyData {
             if (data[i] > max){
                 max = data[i];
             }
-            return max;
+        return max;
         }
     }
 
